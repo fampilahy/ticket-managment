@@ -45,7 +45,7 @@ public class TicketHandlerBean implements Serializable{
 		try {
 //			String name = request.getParameter(NAME_KEY).trim();
 			request.setAttribute(NAME_KEY, name);
-			request.getRequestDispatcher("/tickethandler2").forward(request,response);
+			request.getRequestDispatcher("/tickethandler").forward(request,response);
 			facesContext.responseComplete();
 		} catch (ServletException | IOException e) {
 			Logger.getLogger(TicketHandlerBean.class.getName()).log(Level.SEVERE, e.getMessage(), e);
