@@ -35,8 +35,13 @@
     <servlet-class>web_app.rest.resource.ticket.TicketHandler</servlet-class>
   </servlet>
   
+  <listener>
+	  <display-name>init</display-name>
+	  <listener-class>web_app.listener.FactoryInitializer</listener-class>  
+  </listener>
+  
   <servlet-mapping>
     <servlet-name>TicketHandler</servlet-name>
-    <url-pattern>/tickethandler2</url-pattern>
+    <url-pattern>/tickethandler</url-pattern>
   </servlet-mapping>
 </web-app>

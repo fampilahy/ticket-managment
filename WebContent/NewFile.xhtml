@@ -5,13 +5,19 @@
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:head>
-        <title>test</title>
+        <title>Search ticket</title>
     </h:head>
     <h:body>
+        
+        
         <h:form>
         
-        	<h:outputLabel>aaaa</h:outputLabel>
+        
+        	<h:outputLabel for="number">Number : </h:outputLabel>
+        	<h:inputText id="number" value="#{ticketHandlerBean.number}"></h:inputText>
+        	<h:commandButton  action="#{ticketHandlerBean.forward}" value="Search"/>
         
         </h:form>
+        
     </h:body>
 </html>
