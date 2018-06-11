@@ -1,12 +1,14 @@
 package ticket_business.manager;
 
+import ticket_business.manager.contract.ProjectManager;
+
 public class ManagerFactory {
 	
-	private static ProjetManager projectManager;
+	private static ProjectManager projectManager;
 	
 	private static TicketManager ticketManager;
 	
-	public ProjetManager getProjectManager() {
+	public ProjectManager getProjectManager() {
 		return projectManager;
 	}
 	
@@ -15,13 +17,13 @@ public class ManagerFactory {
 	}
 
 
-	public void setProjectManager(ProjetManager projectManager) {
-		this.projectManager = projectManager;
+	public void setProjectManager(ProjectManager projectManager) {
+		ManagerFactory.projectManager = projectManager;
 	}
 
 
 	public void setTicketManager(TicketManager ticketManager) {
-		this.ticketManager = ticketManager;
+		ManagerFactory.ticketManager = ticketManager;
 	}
 
 

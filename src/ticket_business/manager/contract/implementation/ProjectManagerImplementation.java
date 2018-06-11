@@ -1,28 +1,22 @@
-package ticket_business.manager;
-
+package ticket_business.manager.contract.implementation;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import ticket_business.manager.contract.ProjectManager;
 import ticket_model.model.bean.projet.Projet;
 import ticket_model.model.exception.NotFoundException;
 
-
-/**
- * Manager des beans du package Projet.
- *
- * @author rose
- */
-public class ProjetManager {
-
-    /**
+public class ProjectManagerImplementation implements ProjectManager{
+	 /**
      * Renvoie le projet demandé
      *
      * @param pId l'identifiant du projet
      * @return Le {@link Projet}
      * @throws NotFoundException Si le projet n'est pas trouvé
      */
-    public Projet getProjet(Integer pId) throws NotFoundException {
+    @Override
+	public Projet getProjet(Integer pId) throws NotFoundException {
         // Je n'ai pas encore codé la DAO
         // Je mets juste un code temporaire pour commencer le cours...
         if (pId < 1) {
@@ -39,7 +33,8 @@ public class ProjetManager {
      *
      * @return List
      */
-    public List<Projet> getListProjet() {
+    @Override
+	public List<Projet> getListProjet() {
         // Je n'ai pas encore codé la DAO
         // Je mets juste un code temporaire pour commencer le cours...
         List<Projet> vList = new ArrayList<>();

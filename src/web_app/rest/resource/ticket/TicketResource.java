@@ -12,6 +12,7 @@ import ticket_business.manager.TicketManager;
 import ticket_model.model.bean.ticket.Ticket;
 import ticket_model.model.exception.NotFoundException;
 import ticket_model.model.recherche.ticket.RechercheTicket;
+import web_app.rest.resource.AbstractResource;
 
 
 /**
@@ -21,7 +22,7 @@ import ticket_model.model.recherche.ticket.RechercheTicket;
  */
 //@Path("/tickets")
 //@Produces(MediaType.APPLICATION_JSON)
-public class TicketResource {
+public class TicketResource extends AbstractResource {
 
 
     /**
@@ -34,7 +35,8 @@ public class TicketResource {
 //    @GET
 //    @Path("{numero}")
     public Ticket get(@PathParam("numero") Long pNumero) throws NotFoundException {
-        TicketManager vTicketManager = new TicketManager();
+        TicketManager vTicketManager = getManagerFactorySingletonWay().getTicketManager();
+        vTicketManager = getManagerFactory().getTicketManager();
         Ticket vTicket = vTicketManager.getTicket(pNumero);
         return vTicket;
     }

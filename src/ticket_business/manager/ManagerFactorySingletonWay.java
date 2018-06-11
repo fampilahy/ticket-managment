@@ -1,5 +1,8 @@
 package ticket_business.manager;
 
+import ticket_business.manager.contract.ProjectManager;
+import ticket_business.manager.contract.implementation.ProjectManagerImplementation;
+
 public class ManagerFactorySingletonWay {
 	
 	private ManagerFactorySingletonWay (){
@@ -8,8 +11,10 @@ public class ManagerFactorySingletonWay {
 	
 	private static final ManagerFactorySingletonWay MANAGER_FACTORY = new ManagerFactorySingletonWay();
 	
-	public ProjetManager getProjectManager(){
-		return new ProjetManager();
+	
+	//note this is not good since each call to this method with create a new ProjectManager 
+	public ProjectManager getProjectManager(){
+		return new ProjectManagerImplementation();
 	}
 	
 	public TicketManager getTicketManager(){
