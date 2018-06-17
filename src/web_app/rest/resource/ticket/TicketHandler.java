@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 //@WebServlet("/tickethandler")
 public class TicketHandler extends HttpServlet {
 	
+	
 	public static final String TICKET_HANDLER_VIEW = "/index.xhtml";
 	private static final long serialVersionUID = 1L;
        
